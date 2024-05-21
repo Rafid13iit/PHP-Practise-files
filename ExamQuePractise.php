@@ -21,6 +21,10 @@
 	// var_dump([2, 3.40000034034, "Bangla"]);
 	// var_dump(NULL);
 
+
+// Semester Final Exam Practise...
+
+
 	// $i=0;
 	// for(++$i; ++$i; ++$i) {
 	// 	print $i;
@@ -29,12 +33,35 @@
 	// }
 	// output: 24
 
+
 	// $names = array("Sam", "Bob", "Jack");
 	// echo $names[0]." is the brother of ".$names[1]." and ".$names[1].".".$brother;
+	// Warning: Undefined variable $brother in C:\xampp\htdocs\webdev\test.php on line 38
+	// Sam is the brother of Bob and Bob.
 	
-	$a = "clue";
-	$a .= "get";
-	echo $a;
+
+	// $a = "clue";
+	// $a .= "get";
+	// echo $a;
+	// output: clueget
+
+
+	// $team = "arsenal";
+	// switch ($team) {
+	// case "manu":
+	// 	echo "I love man u";
+	// case "arsenal":
+	// 	echo "I love arsenal";
+	// case "manc":
+	// 	echo "I love manc"; 
+	// }
+	// output: I love arsenalI love manc
+
+
+	// $num = "1";
+	// $num1 = "2";
+	// print $num+$num1;
+	// output: 3
 
 
 ?>
