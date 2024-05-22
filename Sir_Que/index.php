@@ -14,7 +14,7 @@ if (!isset($_SESSION['user_id'])) {
     header("Location: login.php");
     exit();
 }
-echo "Welcome, you are logged in!";
+echo "Welcome " . $_SESSION['username'] . ", you are logged in!";
 ?>
 <!-- Logout link -->
 <a href="logout.php">Logout</a>

@@ -34,6 +34,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
         if (password_verify($password, $row['password'])) {
             // Set session variable for user id
             $_SESSION['user_id'] = $row['id'];
+            $_SESSION['username'] = $row['username'];
             
             // Set cookies if "Remember me" is checked
             if ($remember) {
