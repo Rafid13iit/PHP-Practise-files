@@ -1,22 +1,20 @@
+<!-- index.php:
+
+Starts the session.
+Checks if the user is logged in by verifying if the session variable user_id is set.
+Displays a welcome message if the user is logged in.
+Provides a logout link to logout.php. -->
+
+
 <?php
 session_start();
 
-if(!isset($_SESSION['user_id'])) {
-    header("Location: login.php"); // Redirect to login page if user is not logged in
-    exit;
+// Check if user is logged in
+if (!isset($_SESSION['user_id'])) {
+    header("Location: login.php");
+    exit();
 }
-
-echo "Welcome User " . $_SESSION['user_id'];
-
+echo "Welcome, you are logged in!";
 ?>
-
-<!DOCTYPE html>
-<html>
-<head>
-    <title>Index</title>
-</head>
-<body>
-    <h2>Index</h2>
-    <a href="logout.php">Logout</a>
-</body>
-</html>
+<!-- Logout link -->
+<a href="logout.php">Logout</a>

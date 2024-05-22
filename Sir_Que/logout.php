@@ -1,18 +1,23 @@
+<!-- logout.php:
+
+Starts the session.
+Destroys the session variables and data.
+Clears the cookies for username and password.
+Redirects the user to the login page. -->
+
+
 <?php
 session_start();
 
-// Unset all session variables
-$_SESSION = array();
-
-// Destroy the session
+// Destroy session variables and session data
+session_unset();
 session_destroy();
 
-// Delete the cookie if it exists
-if(isset($_COOKIE['user_id'])) {
-    setcookie("user_id", "", time() - 3600, "/");
-}
+// Clear cookies
+setcookie('username', '', time() - 3600, "/");
+setcookie('password', '', time() - 3600, "/");
 
 // Redirect to login page
 header("Location: login.php");
-exit;
+exit();
 ?>
